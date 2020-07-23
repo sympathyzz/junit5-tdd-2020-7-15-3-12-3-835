@@ -9,7 +9,7 @@ public class GuessNumberGameTest {
     @Test
     void should_return_4A0B_when_guess_number_given_1234(){
         //given
-        GuessNumberGame guessNumberGame = new GuessNumberGame("5678");
+        GuessNumberGame guessNumberGame = new GuessNumberGame("1234");
         //when
         String result=guessNumberGame.guess();
         //then
@@ -23,5 +23,14 @@ public class GuessNumberGameTest {
         String result=guessNumberGame.guess();
         //then
         assertEquals("0A0B",result);
+    }
+    @Test
+    void should_return_3A0B_when_guess_number_given_1235(){
+        //given
+        GuessNumberGame guessNumberGame = new GuessNumberGame("1235");
+        //when
+        String result=guessNumberGame.guess();
+        //then
+        assertEquals("3A0B",result);
     }
 }

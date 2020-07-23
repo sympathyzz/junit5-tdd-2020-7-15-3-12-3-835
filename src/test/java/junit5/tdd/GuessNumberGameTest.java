@@ -15,4 +15,13 @@ public class GuessNumberGameTest {
         //then
         assertEquals("4A0B",result);
     }
+    @Test
+    void should_return_0A0B_when_guess_number_given_5678(){
+        //given
+        GuessNumberGame guessNumberGame = new GuessNumberGame();
+        //when
+        String result=guessNumberGame.guess();
+        //then
+        assertEquals("0A0B",result);
+    }
 }

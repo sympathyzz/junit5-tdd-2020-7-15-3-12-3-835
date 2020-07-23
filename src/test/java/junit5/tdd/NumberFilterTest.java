@@ -16,4 +16,14 @@ public class NumberFilterTest {
         //then
         assertEquals("Wrong Input,Input again",output);
     }
+    @Test
+    void should_return_pass_when_filter_number_given_1234(){
+        //given
+        String input="1234";
+        NumberFilter filter=new NumberFilter();
+        //when
+        String output=filter.filter();
+        //then
+        assertEquals("pass",output);
+    }
 }

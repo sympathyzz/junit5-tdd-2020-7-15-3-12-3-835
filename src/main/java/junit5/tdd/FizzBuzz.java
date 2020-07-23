@@ -1,16 +1,19 @@
 package junit5.tdd;
 
+import com.google.common.base.Strings;
+
 public class FizzBuzz {
     public String play(int number){
-        if(number%3==0&&number%5==0){
-            return "fizzbuzz";
-        }
+        String result= "";
         if(number%3==0){
-            return "fizz";
+            result+="fizz";
         }
         if(number%5==0){
-            return "buzz";
+            result+="buzz";
         }
-        return String.valueOf(number);
+        if(result.isEmpty()){
+            result= String.valueOf(number) ;
+        }
+        return result;
     }
 }

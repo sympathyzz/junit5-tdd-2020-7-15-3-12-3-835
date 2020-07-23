@@ -9,7 +9,7 @@ public class GuessNumberGameTest {
     @Test
     void should_return_4A0B_when_guess_number_given_1234(){
         //given
-        GuessNumberGame guessNumberGame = new GuessNumberGame();
+        GuessNumberGame guessNumberGame = new GuessNumberGame("5678");
         //when
         String result=guessNumberGame.guess();
         //then
@@ -18,7 +18,7 @@ public class GuessNumberGameTest {
     @Test
     void should_return_0A0B_when_guess_number_given_5678(){
         //given
-        GuessNumberGame guessNumberGame = new GuessNumberGame();
+        GuessNumberGame guessNumberGame = new GuessNumberGame("5678");
         //when
         String result=guessNumberGame.guess();
         //then

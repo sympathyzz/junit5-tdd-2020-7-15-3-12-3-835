@@ -1,15 +1,21 @@
 package junit5.tdd;
 
 import org.junit.jupiter.api.Test;
+import org.mockito.Mockito;
 
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.mockito.BDDMockito.given;
 
 public class GuessNumberGameTest {
+    private AnswerGenerate AnswerGenerate;
+
     @Test
     void should_return_4A0B_when_guess_number_given_1234(){
         //given
-        GuessNumberGame guessNumberGame = new GuessNumberGame("1234");
+        AnswerGenerate mockedAnswerGenerate=Mockito.mock(AnswerGenerate.class);
+        given(mockedAnswerGenerate.generateAnswer()).willReturn("1234");
+        GuessNumberGame guessNumberGame = new GuessNumberGame(mockedAnswerGenerate.generateAnswer());
         //when
         String result=guessNumberGame.guess();
         //then

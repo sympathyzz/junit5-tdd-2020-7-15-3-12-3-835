@@ -24,4 +24,13 @@ public class NumberFilterTest {
         //then
         assertEquals("pass",output);
     }
+    @Test
+    void should_return_pass_input_when_filter_number_given_5678(){
+        //given
+        NumberFilter filter=new NumberFilter("5678");
+        //when
+        String output=filter.filter();
+        //then
+        assertEquals("pass",output);
+    }
 }

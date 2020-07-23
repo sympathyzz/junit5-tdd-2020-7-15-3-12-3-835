@@ -22,7 +22,7 @@ public class NumberFilterTest {
         //when
         String output=filter.filter();
         //then
-        assertEquals("pass",output);
+        assertEquals("Pass",output);
     }
     @Test
     void should_return_pass_input_when_filter_number_given_5678(){
@@ -31,6 +31,6 @@ public class NumberFilterTest {
         //when
         String output=filter.filter();
         //then
-        assertEquals("pass",output);
+        assertEquals("Pass",output);
     }
 }

@@ -35,6 +35,6 @@ public class FizzBuzzTest {
         //when
         String result=fizzBuzz.play(number);
         //then
-        assertEquals("fizz",result);
+        assertEquals("buzz",result);
     }
 }

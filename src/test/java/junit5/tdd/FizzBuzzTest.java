@@ -15,4 +15,15 @@ public class FizzBuzzTest {
         //then
         assertEquals("1",result);
     }
+
+    @Test
+    void should_return_fizz_when_play_fizz_buzz_given_3(){
+        //given
+        FizzBuzz fizzBuzz=new FizzBuzz();
+        int number=3;
+        //when
+        String result=fizzBuzz.play(number);
+        //then
+        assertEquals("fizz",result);
+    }
 }
